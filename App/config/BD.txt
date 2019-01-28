@@ -1,0 +1,40 @@
+/*
+SQLyog Ultimate v11.11 (64 bit)
+MySQL - 5.5.5-10.1.25-MariaDB : Database - udelbosque
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+USE `udelbosque`;
+
+/*Data for the table `ciudades` */
+
+insert  into `ciudades`(`id`,`ciudad`) values (1,'Bogotá DC.'),(2,'Cali'),(3,'Medellin'),(4,'Bucaramanga'),(5,'Cartagena');
+
+/*Data for the table `pasientes` */
+
+insert  into `pasientes`(`id`,`apellidos`,`nombres`,`tpo_identificacion`,`identificacion`,`direccion`,`telefono`,`id_ciudad`) values (1,'perez','pepito','T.I',123456,'CLL FALSA 123',213456,1),(2,'Demo','Demo ','T.I',1033750438,'Calle falsa 123',123456879,1),(20,'Castañeda','Miguel 2','C.C',1033750437,'calle falsa 456',7457878,1),(46,'Castañeda Castro','Sara Samantha','C.C',92122475346,'Carrera 5J # 48 L 74 int 5 - casa 8',12345689,3),(48,'Casillas Forero','Carlos Andres','C.C',103375043555555,'Carrera 5J # 48 L 74 int 5',7457855,2),(50,'Ortega Niño','Carlos Camilo','C.C',1033750436,'Carrera 5J # 48 L 74 int 5 - casa 8',7457895,2);
+
+/*Data for the table `tratamientos` */
+
+insert  into `tratamientos`(`id`,`nombre`,`valor`,`aplicaDto`) values (5,'Tratamiento 2',12500,0),(8,'Tratamiento Experimental',45000000,0),(9,'Tratamiento Experimental 3',350000,1),(10,'Cirugia N1',1000000,1);
+
+/*Data for the table `tratamientospacientes` */
+
+insert  into `tratamientospacientes`(`id`,`idPaciente`,`idTratamiento`,`fecha`,`valor`) values (1,20,5,'2019-01-27 22:53:42',12500),(2,20,8,'2019-03-29 22:53:52',45000000),(3,20,9,'2019-03-28 02:35:32',350000),(4,2,5,'2019-03-28 02:44:07',12500),(5,2,5,'2019-04-28 02:44:07',12500),(6,1,10,'2019-01-28 04:13:55',1000000),(8,50,10,'2019-01-28 04:18:51',900000);
+
+/*Data for the table `usuarios` */
+
+insert  into `usuarios`(`id`,`nombre`) values (1,'Israel'),(2,'Juan');
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
